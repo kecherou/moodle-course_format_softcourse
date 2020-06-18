@@ -294,10 +294,11 @@ class format_softcourse_renderer extends format_section_renderer_base {
                 $sectionmods[$idsection]->cm[] = $cm;
             }
         }
-
+        $number = 1;
         // Put tabs into a tabs readable by mustache.
         foreach ($sectionmods as $section) {
             $s = new stdClass();
+            $s->number = $number;
             $s->name = $section->name;
             $s->id = $section->id;
             $s->courseid = $this->course->id;
@@ -351,7 +352,7 @@ class format_softcourse_renderer extends format_section_renderer_base {
                 $percentcomplete = $nbcomplete * 100 / $nbcompletion;
                 $s->progression_percent = intval($percentcomplete);
             }
-
+            $number++;
             $sections[] = $s;
         }
 

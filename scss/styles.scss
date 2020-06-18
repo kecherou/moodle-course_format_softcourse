@@ -101,11 +101,6 @@
                             height: 150px;
                             width: 250px;
 
-                            @media only screen and (max-width: 710px) {
-                                background-image: none !important;
-                                width: 50px;
-                            }
-
                             & > span {
                                 bottom: 10px;
                                 color: white;
@@ -225,13 +220,14 @@
                             height: 150px;
                             padding-left: 50px;
 
-                            .softcourse-section-name {
+                            .softcourse-section-name,
+                            .softcourse-section-number {
                                 display: inline-block;
                                 font-size: 1.2rem;
                                 max-height: 30px;
                                 overflow: hidden;
                                 padding-right: 15px;
-                                position: absolute;
+                                position: relative;
                                 text-decoration: none;
                                 text-overflow: ellipsis;
                                 top: 10px;
